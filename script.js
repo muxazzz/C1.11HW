@@ -50,6 +50,20 @@ plus.onclick = () =>{
   updateText()
 }
 
+minus.onclick = () =>{
+if (countSec === 0 && countMin === 0){
+countSec = 0;
+countMin = 0;
+return;	
+}
+if (countSec > 0) --countSec;
+else{
+  	countSec = 59;
+  	--countMin;
+  }
+  updateText()
+}
+
 start.onclick = () => {
 	  countDown();  
 	  $('#second').hide()
